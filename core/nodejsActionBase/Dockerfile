@@ -1,4 +1,4 @@
-FROM buildpack-deps:trusty-curl
+FROM ppc64le/buildpack-deps:trusty-curl
 
 ENV DEBIAN_FRONTEND noninteractive
 

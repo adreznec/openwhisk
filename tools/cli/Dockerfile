@@ -1,4 +1,4 @@
-FROM golang:1.8
+FROM ppc64le/golang:1.8
 
 # Install zip
 RUN apt-get -y update && \

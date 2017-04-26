@@ -9,6 +9,8 @@ include 'core:pythonAction'
 include 'core:python2Action'
 include 'core:swift3Action'
 include 'core:javaAction'
+include 'core:pyalpine27'
+include 'core:pyalpine36'
 
 include 'tools:cli'
 
