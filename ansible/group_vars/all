@@ -81,13 +81,13 @@ consul:
     dns: 8600
 
 kafka:
-  version: 0.10.0.1
+  version: 0.10.2.0
   port: 9092
   ras:
     port: 9093
 
 zookeeper:
-  version: 3.4
+  version: 3.4.10
   port: 2181
 
 invoker:
@@ -99,7 +99,7 @@ invoker:
   useRunc: false
 
 nginx:
-  version: 1.11
+  version: 1.13.0
   port:
     http: 80
     api: 443

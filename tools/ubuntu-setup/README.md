@@ -26,6 +26,8 @@ Follow instructions [tools/db/README.md](../db/README.md) on how to configure a 
 ## Build
 
   ```
+  # Build containers required for ppc64le setup
+  (cd tools/ppc64le-setup && ./docker-ppc.sh)
   cd <home_openwhisk>
   ./gradlew distDocker
   ```

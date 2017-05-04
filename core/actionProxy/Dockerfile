@@ -1,5 +1,5 @@
 # Dockerfile for docker skeleton (useful for running blackbox binaries, scripts, or Python 3 actions) .
-FROM pythonalpine3.6
+FROM ppc64le/python:3.6-alpine
 
 # Upgrade and install basic Python dependencies.
 RUN apk add --no-cache bash \

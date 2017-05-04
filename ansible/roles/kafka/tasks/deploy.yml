@@ -3,11 +3,12 @@
 
 - name: "pull the zookeeper:{{ zookeeper.version }} image"
   shell: "docker pull zookeeper:{{ zookeeper.version }}"
+  when: ansible_architecture != "ppc64le"
 
 - name: (re)start zookeeper
   docker_container:
     name: zookeeper
-    image: zookeeper:{{ zookeeper.version }}
+    image: ppc64le/zookeeper:{{ zookeeper.version }}
     state: started
     recreate: true
     restart_policy: "{{ docker.restart.policy }}"
@@ -23,11 +24,12 @@
 
 - name: "pull the ches/kafka:{{ kafka.version }} image"
   shell: "docker pull ches/kafka:{{ kafka.version }}"
+  when: ansible_architecture != "ppc64le"
 
 - name: (re)start kafka
   docker_container:
     name: kafka
-    image: ches/kafka:{{ kafka.version }}
+    image: ppc64le/kafka:{{ kafka.version }}
     state: started
     recreate: true
     restart_policy: "{{ docker.restart.policy }}"

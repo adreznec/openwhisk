@@ -1,5 +1,5 @@
 # Dockerfile for Python 2 actions, similar to the Python 3-based core/pythonAction
-FROM pythonalpine2.7
+FROM ppc64le/python:2.7-alpine
 
 # Upgrade and install basic Python dependencies
 RUN apk add --no-cache \

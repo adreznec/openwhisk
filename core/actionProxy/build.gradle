@@ -1,3 +1,2 @@
 ext.dockerImageName = 'dockerskeleton'
 apply from: '../../gradle/docker.gradle'
-distDocker.dependsOn ':core:pyalpine36:distDocker'

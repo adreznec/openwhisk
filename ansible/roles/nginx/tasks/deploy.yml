@@ -28,11 +28,12 @@
 
 - name: "pull the nginx:{{ nginx.version }} image"
   shell: "docker pull nginx:{{ nginx.version }}"
+  when: ansible_architecture != "ppc64le"
 
 - name: (re)start nginx
   docker_container:
     name: nginx
-    image: nginx:{{ nginx.version }}
+    image: ppc64le/nginx:{{ nginx.version }}
     state: started
     recreate: true
     restart_policy: "{{ docker.restart.policy }}"

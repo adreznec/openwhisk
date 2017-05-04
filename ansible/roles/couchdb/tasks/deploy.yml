@@ -17,11 +17,12 @@
 
 - name: "pull the couchdb:{{ couchdb.version }} image"
   shell: "docker pull couchdb:{{ couchdb.version }}"
+  when: ansible_architecture != "ppc64le"
 
 - name: (re)start CouchDB
   docker_container:
     name: couchdb
-    image: couchdb:{{ couchdb.version }}
+    image: ppc64le/couchdb:{{ couchdb.version }}
     state: started
     recreate: true
     restart_policy: "{{ docker.restart.policy }}"

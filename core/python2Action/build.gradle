@@ -1,6 +1,6 @@
 ext.dockerImageName = 'python2action'
 apply from: '../../gradle/docker.gradle'
-distDocker.dependsOn ':core:pyalpine27:distDocker', 'copyFiles'
+distDocker.dependsOn 'copyFiles'
 distDocker.finalizedBy 'rmFiles'
 
 def runners = files(
